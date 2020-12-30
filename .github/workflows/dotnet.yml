@@ -17,9 +17,9 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build  ./src/Doublel.UseCases.csproj --configuration Release --no-restore
+      run: dotnet build  ./src/Doublel.UseCases/Doublel.UseCases.csproj --configuration Release --no-restore
     - name: Build Doublel.UseCases
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
-          PROJECT_FILE_PATH: src/Doublel.UseCases.csproj
+          PROJECT_FILE_PATH: src/Doublel.UseCases/Doublel.UseCases.csproj
           NUGET_KEY: ${{secrets.NUGET_API_KEY}}
