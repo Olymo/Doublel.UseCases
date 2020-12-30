@@ -1,2 +1,2 @@
 # Doublel.UseCases
-UseCase driven business logic bundle
+UseCase driven business logic bundle.
