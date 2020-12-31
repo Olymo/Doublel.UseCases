@@ -10,6 +10,8 @@ namespace Doublel.UseCases
 
     public interface IUseCaseLogSearch
     {
+        int PerPage { get; set; }
+        int Page { get; set; }
         DateTime? StartDate { get; set; }
         DateTime? EndDate { get; set; }
         int? ActorId { get; set; }
