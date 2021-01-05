@@ -12,7 +12,7 @@ namespace Doublel.UseCases
 
     public class UseCaseLog
     {
-        public object UseCaseData { get; set; }
+        public string UseCaseData { get; set; }
         public DateTime ExecutedTime { get; set; } = DateTime.UtcNow;
         public string ActorIdentity { get; set; }
         public object ActorId { get; set; }

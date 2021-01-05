@@ -1,4 +1,6 @@
 ﻿
+using Newtonsoft.Json;
+
 namespace Doublel.UseCases
 {
     public class LoggingUseCaseDecorator<TUseCase, TData, TResult> : UseCaseHandlingDecorator<TUseCase, TData, TResult>
@@ -22,7 +24,7 @@ namespace Doublel.UseCases
                     ActorIdentity = _actor.Identity,
                     Id = useCase.UseCaseInstanceId,
                     Status = UseCaseExecutionStatus.Pending,
-                    UseCaseData = useCase.Data,
+                    UseCaseData = JsonConvert.SerializeObject(useCase.Data),
                     UseCaseName = useCase.Name
                 });
             }
