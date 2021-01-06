@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Doublel.UseCases
 {
     public interface IApplicationActor
     {
-        object Identifier { get; }
+        int Identifier { get; }
         IEnumerable<int> AllowedUseCaseIds { get; }
         bool IsAdmin { get; }
         string Identity { get; set; }
