@@ -25,7 +25,7 @@ namespace Doublel.UseCases
                     Id = useCase.UseCaseInstanceId,
                     Status = UseCaseExecutionStatus.Pending,
                     UseCaseData = JsonConvert.SerializeObject(useCase.Data),
-                    UseCaseName = useCase.Name
+                    UseCaseId = useCase.Id
                 });
             }
 
