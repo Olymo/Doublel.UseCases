@@ -18,6 +18,6 @@ namespace Doublel.UseCases
         public int ActorId { get; set; }
         public UseCaseExecutionStatus Status { get; set; }
         public Guid Id { get; set; }
-        public string UseCaseName { get; set; }
+        public string UseCaseId { get; set; }
     }
 }

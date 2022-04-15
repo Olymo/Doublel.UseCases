@@ -13,12 +13,12 @@ namespace Doublel.UseCases
 
         public override TResult Handle(TUseCase useCase)
         {
-            if (_actor.AllowedUseCaseIds.Contains(useCase.Id) || _actor.IsAdmin)
+            if (_actor.AllowedUseCases.Contains(useCase.Id) || _actor.IsAdmin)
             {
                 return Decoratee.Handle(useCase);
             }
 
-            throw new UnauthorizedAccessException($"Actor {_actor.Identity} with an Id of {_actor.Identifier} has tried to execute {useCase.Name} use case without beeing authorized to do so.");
+            throw new UnauthorizedAccessException($"Actor {_actor.Identity} with an Id of {_actor.Identifier} has tried to execute {useCase.Id} use case without beeing authorized to do so.");
         }
     }
 }

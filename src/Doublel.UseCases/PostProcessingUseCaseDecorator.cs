@@ -34,8 +34,7 @@ namespace Doublel.UseCases
                 {
                     Actor = _actor,
                     UseCaseData = useCase.Data,
-                    UseCaseId = useCase.Id,
-                    UseCaseName = useCase.Name
+                    UseCaseId = useCase.Id
                 };
 
                 if (_subscribers != null && _subscribers.Any())

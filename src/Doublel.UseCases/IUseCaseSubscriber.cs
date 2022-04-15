@@ -10,7 +10,6 @@
     {
         public IApplicationActor Actor { get; set; }
         public TData UseCaseData { get; set; }
-        public int UseCaseId { get; set; }
-        public string UseCaseName { get; set; }
+        public string UseCaseId { get; set; }
     }
 }
