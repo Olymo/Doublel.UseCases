@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Doublel.UseCases.Exceptions;
 
 namespace Doublel.UseCases
 {
@@ -48,6 +49,10 @@ namespace Doublel.UseCases
                 _repository.UpdateStatus(useCase.UseCaseInstanceId, UseCaseExecutionStatus.Successfull);
 
                 return result;
+            }
+            catch (UseCaseValidationException ex)
+            {
+                throw ex;
             }
             catch (Exception ex)
             {
