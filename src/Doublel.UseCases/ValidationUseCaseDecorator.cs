@@ -25,7 +25,7 @@ namespace Doublel.UseCases
                 throw new UseCaseValidationException(result.Errors.Select(x => new UseCaseValidationError
                 {
                     Error = x.ErrorMessage,
-                    PropertyName = x.PropertyName.Split('.')[1]
+                    PropertyName = x.PropertyName.Split('.').Count() > 1 ? x.PropertyName.Split('.')[1] : x.PropertyName.Split('.')[0]
                 }));
             }
 
